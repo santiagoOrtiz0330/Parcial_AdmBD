@@ -1,5 +1,5 @@
 plsql.execute <<-SQL
-  CREATE TABLESPACE mid_term DATAFILE 'Santiago.dat' SIZE 200M ONLINE
+  CREATE TABLESPACE mid_term DATAFILE 'Santiago.dat' SIZE 20M ONLINE
 SQL
 
 plsql.execute <<-SQL
