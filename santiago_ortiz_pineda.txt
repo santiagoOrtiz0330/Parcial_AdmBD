@@ -1,0 +1,18 @@
+plsql.execute <<-SQL
+  CREATE TABLESPACE mid_term DATAFILE 'Santiago.dat' SIZE 200M ONLINE
+SQL
+
+plsql.execute <<-SQL
+  CREATE PROFILE exam LIMIT 
+  IDLE_TIME 5  
+  FAILED_LOGIN_ATTEMPTS 2
+SQL
+
+plsql.execute <<-SQL
+  CREATE USER ejercicios
+  IDENTIFIED BY ejercicios
+  DEFAULT TABLESPACE mid_term
+  QUOTA UNLIMITED ON mid_term
+  profile exam
+SQL
+
